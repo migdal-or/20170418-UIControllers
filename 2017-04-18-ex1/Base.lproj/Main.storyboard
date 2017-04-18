@@ -45,14 +45,51 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMo-cy-elK">
+                                <rect key="frame" x="94" y="363" width="97" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.17991071663819014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="9PQ-wl-sAL" kind="show" id="fqc-TV-U5I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ah6-PV-qLD"/>
+                    <navigationItem key="navigationItem" id="ah6-PV-qLD">
+                        <barButtonItem key="backBarButtonItem" title="back button" id="CDG-WF-b15"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="NZ3-Rs-qZe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cYM-5D-U0b">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNV-qD-uQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266.39999999999998" y="40.929535232383813"/>
+            <point key="canvasLocation" x="228" y="41"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="2Uf-BX-iW8">
+            <objects>
+                <viewController id="9PQ-wl-sAL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VlM-MB-J0p"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ud-MS-IxW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uof-n9-c7j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="haW-cp-vgp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rI-Qf-mZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="41"/>
         </scene>
     </scenes>
 </document>
