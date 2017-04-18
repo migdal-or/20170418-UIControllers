@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:666];
     self.buttonBack = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
     [self.view addSubview:self.buttonBack];
     
