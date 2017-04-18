@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		040370561EA67F4E00A90F0A /* ViewControllerNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 040370551EA67F4E00A90F0A /* ViewControllerNext.m */; };
+		040370591EA6827B00A90F0A /* CustomPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040370581EA6827B00A90F0A /* CustomPageVC.m */; };
 		04DB0EE41EA6744D008E8F0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB0EE31EA6744D008E8F0D /* main.m */; };
 		04DB0EE71EA6744D008E8F0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB0EE61EA6744D008E8F0D /* AppDelegate.m */; };
 		04DB0EEA1EA6744D008E8F0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB0EE91EA6744D008E8F0D /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		040370541EA67F4E00A90F0A /* ViewControllerNext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerNext.h; sourceTree = "<group>"; };
 		040370551EA67F4E00A90F0A /* ViewControllerNext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerNext.m; sourceTree = "<group>"; };
+		040370571EA6827B00A90F0A /* CustomPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPageVC.h; sourceTree = "<group>"; };
+		040370581EA6827B00A90F0A /* CustomPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPageVC.m; sourceTree = "<group>"; };
 		04DB0EDF1EA6744D008E8F0D /* 2017-04-18-ex1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2017-04-18-ex1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DB0EE31EA6744D008E8F0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04DB0EE51EA6744D008E8F0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				040370541EA67F4E00A90F0A /* ViewControllerNext.h */,
 				040370551EA67F4E00A90F0A /* ViewControllerNext.m */,
 				04DB0EEB1EA6744D008E8F0D /* Main.storyboard */,
+				040370571EA6827B00A90F0A /* CustomPageVC.h */,
+				040370581EA6827B00A90F0A /* CustomPageVC.m */,
 				04DB0EEE1EA6744D008E8F0D /* Assets.xcassets */,
 				04DB0EF01EA6744D008E8F0D /* LaunchScreen.storyboard */,
 				04DB0EF31EA6744D008E8F0D /* Info.plist */,
@@ -158,6 +163,7 @@
 			files = (
 				04DB0EEA1EA6744D008E8F0D /* ViewController.m in Sources */,
 				040370561EA67F4E00A90F0A /* ViewControllerNext.m in Sources */,
+				040370591EA6827B00A90F0A /* CustomPageVC.m in Sources */,
 				04DB0EE71EA6744D008E8F0D /* AppDelegate.m in Sources */,
 				04DB0EE41EA6744D008E8F0D /* main.m in Sources */,
 			);
