@@ -33,16 +33,19 @@
                                                    navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                  options:@{UIPageViewControllerOptionSpineLocationKey:@(UIPageViewControllerSpineLocationMid)}];
     pageVC.dataSource = self;
-//    [pageVC setViewControllers:@[ [ViewController new],
-//                                  [ViewControllerNext new] ]
-//     
-//                     direction:UIPageViewControllerNavigationDirectionForward
-//                      animated:YES
-//                    completion:^(BOOL finished) {
-//        NSLog(@"finished");
-//    }];
-//    pageVC.viewControllers = не заработало
+    UIViewController *vc1 = [ViewController new];
+    vc1.view.frame = self.window.frame;
+    UIViewController *vc2 = [ViewControllerNext new];
+    vc2.view.frame = self.window.frame;
     
+    [pageVC setViewControllers:@[ vc1, vc2 ]
+                     direction:UIPageViewControllerNavigationDirectionForward
+                      animated:YES
+                    completion:^(BOOL finished) {
+        NSLog(@"finished");
+    }];
+//    pageVC.viewControllers = не заработало
+    pageVC.view.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = pageVC;
     return YES;
 }
