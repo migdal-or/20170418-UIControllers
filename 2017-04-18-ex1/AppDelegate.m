@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "ViewControllerNext.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UITabBarController * tabBarController = [[UITabBarController alloc] init];
+    tabBarController.view.backgroundColor = [UIColor magentaColor];
+    tabBarController.viewControllers = @[
+                                         [ViewController new],
+                                         [ViewControllerNext new]
+                                         ];
+    self.window.rootViewController = tabBarController;
     return YES;
 }
 
