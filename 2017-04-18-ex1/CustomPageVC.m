@@ -7,8 +7,10 @@
 //
 
 #import "CustomPageVC.h"
+#import "ViewControllerNext.h"
+#import "ViewController.h"
 
-@interface CustomPageVC () <UIPageViewControllerDataSource>
+@interface CustomPageVC ()
 
 @end
 
@@ -20,6 +22,8 @@
     // если нил, то не будет знать что показывать.
     
 }
+
+//- (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 
 //- (void)didReceiveMemoryWarning {
 //    [super didReceiveMemoryWarning];

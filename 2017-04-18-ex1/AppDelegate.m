@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "ViewControllerNext.h"
+#import "CustomPageVC.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UIPageViewControllerDataSource>
 
 @end
 
@@ -27,7 +28,32 @@
 //                                         [ViewControllerNext new]
 //                                         ];
 //    self.window.rootViewController = tabBarController;
+    
+    CustomPageVC *pageVC = [[CustomPageVC alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
+                                                   navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                                                                 options:@{UIPageViewControllerOptionSpineLocationKey:@(UIPageViewControllerSpineLocationMid)}];
+    pageVC.dataSource = self;
+//    [pageVC setViewControllers:@[ [ViewController new],
+//                                  [ViewControllerNext new] ]
+//     
+//                     direction:UIPageViewControllerNavigationDirectionForward
+//                      animated:YES
+//                    completion:^(BOOL finished) {
+//        NSLog(@"finished");
+//    }];
+//    pageVC.viewControllers = не заработало
+    
+    self.window.rootViewController = pageVC;
     return YES;
+}
+
+- (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    NSLog(@"vc");
+    return viewController;
+}
+- (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    NSLog(@"vc");
+    return viewController;
 }
 
 
