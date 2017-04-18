@@ -31,6 +31,10 @@
 - (IBAction)buttonTapped:(id)sender {
     // затащили этот батон на tapinside на сам viewcontr
 //    а могли просто вызвать метод во viewdidload ^^
+    UIViewController *vc = [UIViewController new];
+    
+    [self.navigationController pushViewController:vc
+                                         animated:YES];
 }
 
 
