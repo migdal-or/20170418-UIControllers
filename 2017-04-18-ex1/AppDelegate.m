@@ -13,6 +13,8 @@
 
 @interface AppDelegate () <UIPageViewControllerDataSource>
 
+@property (nonatomic, strong) NSArray<UIViewController *>* vcList;
+
 @end
 
 @implementation AppDelegate
@@ -33,30 +35,36 @@
                                                    navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                  options:@{UIPageViewControllerOptionSpineLocationKey:@(UIPageViewControllerSpineLocationMid)}];
     pageVC.dataSource = self;
+    pageVC.view.frame = self.window.frame;
     UIViewController *vc1 = [ViewController new];
     vc1.view.frame = self.window.frame;
-    UIViewController *vc2 = [ViewControllerNext new];
+    vc1.view.backgroundColor = [UIColor yellowColor];
+    UIViewController *vc2 = [ViewController new];
     vc2.view.frame = self.window.frame;
+    vc2.view.backgroundColor = [UIColor brownColor];
+
+    self.vcList = @[vc1, vc2];
     
-    [pageVC setViewControllers:@[ vc1, vc2 ]
+    [pageVC setViewControllers:self.vcList
                      direction:UIPageViewControllerNavigationDirectionForward
                       animated:YES
                     completion:^(BOOL finished) {
         NSLog(@"finished");
     }];
-//    pageVC.viewControllers = не заработало
-    pageVC.view.backgroundColor = [UIColor whiteColor];
+//    pageVC.view.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = pageVC;
     return YES;
 }
 
 - (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    NSLog(@"vc");
-    return viewController;
+    NSUInteger currentIndex = [self.vcList indexOfObject:viewController];
+    NSUInteger previousIndex = (currentIndex - 1) % self.vcList.count;
+    return self.vcList[previousIndex];
 }
 - (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    NSLog(@"vc");
-    return viewController;
+    NSUInteger currentIndex = [self.vcList indexOfObject:viewController];
+    NSUInteger previousIndex = (currentIndex + 1) % self.vcList.count;
+    return self.vcList[previousIndex];
 }
 
 
