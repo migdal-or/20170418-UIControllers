@@ -10,6 +10,11 @@
 
 @interface ViewController ()
 
+@property (nonatomic, weak) IBOutlet UIButton *button;
+//пустой кружок - нет связи, иначе привязан в сториборд
+// объявили класс контроллера в сториборде как viewcon
+// появился action
+
 @end
 
 @implementation ViewController
