@@ -28,7 +28,7 @@
         <!--View Controller-->
         <scene sceneID="aUX-Z1-ijE">
             <objects>
-                <viewController id="pDc-P8-ykb" sceneMemberID="viewController">
+                <viewController id="pDc-P8-ykb" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9DW-GT-MgI"/>
                         <viewControllerLayoutGuide type="bottom" id="3ez-i8-uRB"/>
@@ -51,7 +51,7 @@
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.17991071663819014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="9PQ-wl-sAL" kind="show" id="fqc-TV-U5I"/>
+                                    <action selector="buttonTapped:" destination="pDc-P8-ykb" eventType="touchUpInside" id="SsR-dk-AAN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,6 +67,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="button" destination="WMo-cy-elK" id="cLs-CQ-ciU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNV-qD-uQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

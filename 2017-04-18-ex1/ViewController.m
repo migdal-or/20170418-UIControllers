@@ -22,7 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+//    [self.button addTarget:self
+//                    action:@selector(buttonTapped:)
+//          forControlEvents:UIControlEventTouchUpInside]; ^^вот этот
 }
+
+- (IBAction)buttonTapped:(id)sender {
+    // затащили этот батон на tapinside на сам viewcontr
+//    а могли просто вызвать метод во viewdidload ^^
+}
+
 
 
 - (void)didReceiveMemoryWarning {
