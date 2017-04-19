@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomPageVC : UIPageViewController
+@interface CustomPageVC : UISplitViewController
 
 @end

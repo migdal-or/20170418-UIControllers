@@ -22,41 +22,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    CustomPageVC *pageVC = [[CustomPageVC alloc]
-                            initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
-                            navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
-                            options:@{UIPageViewControllerOptionSpineLocationKey:
-                                    @(UIPageViewControllerSpineLocationMid)}];
-    pageVC.dataSource = self;
-    pageVC.view.frame = self.window.frame;
-    pageVC.view.backgroundColor = [UIColor whiteColor];
+//    CustomPageVC *pageVC = [[CustomPageVC alloc]
+//                            initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
+//                            navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+//                            options:@{UIPageViewControllerOptionSpineLocationKey:
+//                                    @(UIPageViewControllerSpineLocationMid)}];
+//    pageVC.dataSource = self;
+//    split.view.frame = self.window.frame;
+//    split.view.backgroundColor = [UIColor whiteColor];
 
-    UIViewController *vc1 = [ViewController new];
-    vc1.view.frame = self.window.frame;
+    ViewController *vc1 = [ViewController new];
+//    vc1.view.frame = self.window.frame;
     vc1.view.backgroundColor = [UIColor yellowColor];
     
-    UIViewController *vc2 = [ViewController new];
-    vc2.view.frame = self.window.frame;
+    ViewControllerNext *vc2 = [ViewControllerNext new];
+//    vc2.view.frame = self.window.frame;
     vc2.view.backgroundColor = [UIColor brownColor];
-    
-//    UIViewController *vc3 = [ViewControllerNext new];
-//    vc3.view.frame = self.window.frame;
-//    vc3.view.backgroundColor = [UIColor blueColor];
-//    
-//    UIViewController *vc4 = [ViewControllerNext new];
-//    vc4.view.frame = self.window.frame;
-//    vc4.view.backgroundColor = [UIColor greenColor];
 
-    self.vcList = @[vc1, vc2];
+//    self.vcList = @[vc1, vc2];
     
-    [pageVC setViewControllers:self.vcList
-                     direction:UIPageViewControllerNavigationDirectionForward
-                      animated:YES
-                    completion:^(BOOL finished) {
-        NSLog(@"finished");
-    }];
+//    UISplitViewController *splitVC = [[[UISplitViewController alloc] initWithNibName:nil bundle:nil] setViewControllers:@[vc1, vc2]];
+    UISplitViewController *splitVC = [[UISplitViewController alloc] initWithNibName:nil bundle:nil];
 
-    self.window.rootViewController = pageVC;
+    [splitVC setViewControllers:@[vc2, vc1]];
+    [[self window] setRootViewController:splitVC];
+    [[self window] makeKeyAndVisible];
+
     return YES;
 }
 

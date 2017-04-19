@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:666];
-    self.buttonBack = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    self.buttonBack = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
     self.buttonBack.backgroundColor = [UIColor greenColor];
     [self.view addSubview:self.buttonBack];
     
