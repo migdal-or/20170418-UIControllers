@@ -27,9 +27,10 @@
                             navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                             options:@{UIPageViewControllerOptionSpineLocationKey:
                                     @(UIPageViewControllerSpineLocationMid)}];
-//    pageVC.dataSource = self;
+    pageVC.dataSource = self;
     pageVC.view.frame = self.window.frame;
-    
+    pageVC.view.backgroundColor = [UIColor whiteColor];
+
     UIViewController *vc1 = [ViewController new];
     vc1.view.frame = self.window.frame;
     vc1.view.backgroundColor = [UIColor yellowColor];
@@ -38,15 +39,15 @@
     vc2.view.frame = self.window.frame;
     vc2.view.backgroundColor = [UIColor brownColor];
     
-    UIViewController *vc3 = [ViewControllerNext new];
-    vc3.view.frame = self.window.frame;
-    vc3.view.backgroundColor = [UIColor blueColor];
-    
-    UIViewController *vc4 = [ViewControllerNext new];
-    vc4.view.frame = self.window.frame;
-    vc4.view.backgroundColor = [UIColor greenColor];
+//    UIViewController *vc3 = [ViewControllerNext new];
+//    vc3.view.frame = self.window.frame;
+//    vc3.view.backgroundColor = [UIColor blueColor];
+//    
+//    UIViewController *vc4 = [ViewControllerNext new];
+//    vc4.view.frame = self.window.frame;
+//    vc4.view.backgroundColor = [UIColor greenColor];
 
-    self.vcList = @[vc1, vc2, vc3, vc4];
+    self.vcList = @[vc1, vc2];
     
     [pageVC setViewControllers:self.vcList
                      direction:UIPageViewControllerNavigationDirectionForward
@@ -54,7 +55,7 @@
                     completion:^(BOOL finished) {
         NSLog(@"finished");
     }];
-//    pageVC.view.backgroundColor = [UIColor whiteColor];
+
     self.window.rootViewController = pageVC;
     return YES;
 }

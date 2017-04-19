@@ -9,7 +9,9 @@
 #import "ViewControllerNext.h"
 
 @interface ViewControllerNext ()
+
 @property (nonatomic, strong) IBOutlet UIButton *buttonBack;
+
 @end
 
 @implementation ViewControllerNext
@@ -17,8 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:666];
+//    self.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:666];
     self.buttonBack = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    self.buttonBack.backgroundColor = [UIColor greenColor];
     [self.view addSubview:self.buttonBack];
     
     [self.buttonBack addTarget:self

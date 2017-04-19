@@ -32,17 +32,15 @@
     // затащили этот батон на tapinside на сам viewcontr
 //    а могли просто вызвать метод во viewdidload ^^
     UIViewController *vc = [UIViewController new];
-    
+    vc.view.backgroundColor = [UIColor cyanColor];
+
     [self.navigationController pushViewController:vc
                                          animated:YES];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

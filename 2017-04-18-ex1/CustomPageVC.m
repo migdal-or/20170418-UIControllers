@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = self; // можно любой объект, важно чтобы поддерживал UIPageViewControllerDataSource
+//    self.dataSource = self; // можно любой объект, важно чтобы поддерживал UIPageViewControllerDataSource
     // если нил, то не будет знать что показывать.
     
 }
