@@ -30,6 +30,7 @@
 //    pageVC.dataSource = self;
 //    split.view.frame = self.window.frame;
 //    split.view.backgroundColor = [UIColor whiteColor];
+    UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
 
     ViewController *vc1 = [ViewController new];
 //    vc1.view.frame = self.window.frame;
@@ -42,11 +43,12 @@
 //    self.vcList = @[vc1, vc2];
     
 //    UISplitViewController *splitVC = [[[UISplitViewController alloc] initWithNibName:nil bundle:nil] setViewControllers:@[vc1, vc2]];
-    UISplitViewController *splitVC = [[UISplitViewController alloc] initWithNibName:nil bundle:nil];
+    UISplitViewController *splitVC = [UISplitViewController new];
 
     [splitVC setViewControllers:@[vc2, vc1]];
-    [[self window] setRootViewController:splitVC];
-    [[self window] makeKeyAndVisible];
+    self.window = window;
+    [self.window setRootViewController:splitVC];
+    self.window.makeKeyAndVisible;
 
     return YES;
 }
